@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+body {
+  background: black;
+  color: white;
+}
+
+.hero{
+  height: 100vh;
+  width: 100%;
+  background: turquoise;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  /* background: black; */
+
+
+}
+
+.navbar ul{
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+li{
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.logo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: orangered;
+}
+
+.cta{
+  background: white;
+  color: black;
+  padding:0 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+.about{
+  display: flex;
+  gap: 10px;
+  min-height: 100vh;
+  
+}
+
+.col-1, .col-2{
+  width: 100%;
+}
+
+.col-1{
+  border-right: 2px solid white;
+  padding: 24px;
+}
+
+.graphic{
+  width: 80%;
+  border-radius: 16px 0 0 16px;
+  margin-left: auto;
+  margin-top: 16px;
+  height: 100px;
+  background: lightgreen;
+}
+
+
+.project-card{
+  width: 80%;
+  margin: 24px auto;
+  /* background: white;
+  color: black; */
+  display: flex;
+  padding: 16px;
+  gap: 10px;
+  border-radius: 16px;
+
+}
+
+.project-image{
+  width: 100%;
+  height: 300px;
+  background: lightblue;
+  border-radius: 16px;
+}
+
+.live-btn{
+  border: 3px solid palegreen;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.more{
+  background: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 180px;
+  margin-left:40%;
+  transition: 500ms;
+  
+}
+
+.more:hover{
+  background: black;
+  color: white;
+  border: 1px solid white;
+}
+
+form{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 24px auto;
+}
+
+input, textarea {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  min-height: 40px;
+  border-radius: 8px;
+}
+
+.submit{
+  width: 50%;
+  margin: 16px auto;
+  border: 3px solid palegreen;
+  transition: 500ms;
+}
+
+.submit:hover{
+  background: white;
+  color: black;
+  border: none;
+}
