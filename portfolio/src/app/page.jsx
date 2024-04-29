@@ -1,35 +1,33 @@
 'use client';
-import { useTransform, useScroll, motion } from "framer-motion";
-import { useRef } from "react";
+
+import Bubble from "./components/bubble";
+import NavBar from "./components/navbar";
+import {bubbles} from "../app/utils/bubbles";
+import LinkButton from "./components/linkButtons";
+
 
 
 
 
 export default function Home() {
 
-  const container = useRef(null);
-  const { scrollYProgress} = useScroll(
-    {
-      target: container,
-      offset: ['start end', 'end start']
-    }
-  )
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, -1000])
-
   return (
     <main>
       <section className="hero">
-        <NavBar/>
-        <div className="division">
-          
-        </div>
-        <h1>Hero Page will be added later</h1>
 
-        <Bubble />
+        <NavBar />
+
+        <div className="division">
+
+        </div>
+        
+        {/* <div className="bubble-container">
+          
+        </div> */}
+        
       </section>
-      <section className="about" id="about" ref={container}>
-        <div className="col-1" y={y}>
+      <section className="about" id="about" >
+        <div className="col-1" >
           <p > 
           
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam repellat perferendis cupiditate ipsam obcaecati nihil magnam, quisquam cum eveniet, facilis laborum 
@@ -49,6 +47,9 @@ export default function Home() {
           <div className="mission">
             <h3>Our Mission</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+          </div>
+          <div className="links">
+            <LinkButton />
           </div>
         </div>
       </section>
@@ -108,40 +109,6 @@ export default function Home() {
   );
 }
 
-const NavBar = () => {
-  return(
-    <nav className="navbar">
-          <div className="logo">
-          
-          </div>
-          <ul className="nav-links">
-            <li>
-              <a href="#hero">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#ask">Ask</a>
-            </li>
-          </ul>
-
-          <button className="cta">Hire Us</button>
 
 
-    </nav>
-  )
-}
 
-const Bubble = () => {
-  return(
-    <div className="bubble">
-          <div className="stack">
-            <img src="/portfolio/public/structure.png" alt="stack" />
-          </div>
-    </div>
-  )
-}
