@@ -6,13 +6,13 @@ import styled from 'styled-components';
 
 import structure from '../../../public/images/structure.png'
 
-export default function Bubble(src, alt) {
+export default function Bubble(source) {
     return (
         <BubbleStyled className="bubble">
            <div className="stack">
                 <Image 
-                src={src}
-                alt={alt}
+                src= {source}
+                alt="stack bubble"
                 />
             
             </div> 

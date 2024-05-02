@@ -4,7 +4,19 @@ import Bubble from "./components/bubble";
 import NavBar from "./components/navbar";
 import LinkButton from "./components/linkButtons";
 import Image from "next/image";
-import SectionWrapper from "./components/sectionWrapper";
+
+
+import bootstrap from '../../public/images/bootstrap.png'
+import css from '../../public/images/css-3.png'
+import django from '../../public/images/django.png'
+import flask from '../../public/images/flask.png'
+import html from '../../public/images/html-5.png'
+import js from '../../public/images/js.png'
+import tailwind from '../../public/images/tailwind.png'
+import structure from '../../public/images/structure.png'
+import vue from '../../public/images/vue.png'
+import typescript from '../../public/images/typescript.png'
+
 
 
 
@@ -35,10 +47,24 @@ export default function Home() {
               Work with us 
             </button>
           </div>
+          <div className="bubble-box">
+            <Bubble source={"#"} />
+            <Bubble source={"#"} />
+            <Bubble source={"#"} />
+            <Bubble source={"#"} />
+          </div>
         </div>
         <div className="division right">
           <div className="profile-circle"></div>
           <div className="circ"></div>
+
+          <div className="bubble-box">
+            <Bubble source={"#"} />
+            <Bubble source={"#"} />
+            <Bubble source={"#"} />
+            <Bubble source={"#"} />
+
+          </div>
         </div>
         
 
