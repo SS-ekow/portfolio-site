@@ -2,8 +2,9 @@
 
 import Bubble from "./components/bubble";
 import NavBar from "./components/navbar";
-import {bubbles} from "../app/utils/bubbles";
 import LinkButton from "./components/linkButtons";
+import Image from "next/image";
+import SectionWrapper from "./components/sectionWrapper";
 
 
 
@@ -13,17 +14,34 @@ export default function Home() {
 
   return (
     <main>
-      <section className="hero">
-
+      <header>
         <NavBar />
+      </header>
+      <section className="hero">
+        
+        <div className="division left">
+          <div className="profile-circle"></div>
+          <div className="circ"></div>
 
-        <div className="division">
+          <div className="headline">
+            <h1>
+              Lorem Ipsum just fuck with us. we're good!.
+            </h1>
+            <h3>
+              For real for real. just trust us and pay us. we got you.
+            </h3>
 
+            <button className="hire-us">
+              Work with us 
+            </button>
+          </div>
+        </div>
+        <div className="division right">
+          <div className="profile-circle"></div>
+          <div className="circ"></div>
         </div>
         
-        {/* <div className="bubble-container">
-          
-        </div> */}
+
         
       </section>
       <section className="about" id="about" >
@@ -108,6 +126,8 @@ export default function Home() {
     </main>
   );
 }
+
+
 
 
 

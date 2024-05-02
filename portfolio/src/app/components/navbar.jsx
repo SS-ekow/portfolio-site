@@ -37,11 +37,14 @@ export default function NavBar() {
 
 const NavBarStyled = styled.header`
 .navbar{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     z-index: 5;
+    position: absolute;
+    top: 0;
 
     ul{
         display: flex;

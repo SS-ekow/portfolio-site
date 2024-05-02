@@ -17,10 +17,106 @@ body {
 }
 
 .hero{
-  height: 100vh;
-  width: 100%;
-  background: #7C6FAF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+  .left{
+    background: teal;
+  }
+
+  .right{
+    background: plum;
+  }  
 }
+
+.division.left{
+  .profile-circle{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    top: 20%;
+    left: 5%;
+    z-index: 80;
+  }
+
+  .profile-circle::after{
+    content: "";
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border-left: 3px solid plum;
+    border-top: 3px solid plum;
+    border-right: 3px solid plum;
+    border-bottom: 3px solid transparent;
+    position: absolute;
+    left: -20px;
+    top: -20px;    
+     }
+
+     .headline{
+      position: absolute;
+      left: 30%;
+      
+      h1{
+        font-size: 80px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'
+      }
+      
+      h3{
+        font-size: 32px;
+      }
+
+      .hire-us{
+        background: white;
+        color: black;
+        padding:0 1rem;
+        border-radius: 5px;
+        font-size: 3rem;
+        cursor: pointer;
+        min-width: 100px;
+        margin: 10% 15%;
+
+      }
+     }
+}
+
+.division.right{
+  .profile-circle{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    top: 60%;
+    left: 60%;
+    z-index: 80;
+  }
+
+  .profile-circle::after{
+    content: "";
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border-left: 3px solid teal;
+    border-top: 3px solid teal;
+    border-right: 3px solid teal;
+    border-bottom: 3px solid transparent;
+    position: absolute;
+    left: -20px;
+    top: -20px;    
+     }
+}
+
+
+
+
+
+
+
+
 
 section{
   min-height: 100vh;
@@ -44,17 +140,6 @@ h1{
   z-index: 6;
   position: relative;
 }
-
-.division {
-  position: relative;
-  width: 75%;
-  height: 100vh;
-  background-color: #61C8BA;
-  clip-path: polygon(0 0, 0 100%, 100% 100%, 75% 50%, 90% 50%, 70% 0);
-  border-radius: 10px;
-}
-
-
 
 .about{
   display: flex;
@@ -161,17 +246,40 @@ input, textarea {
 
 
 .purple{
-  background: rgba(173, 87, 173, 0.822);
+  background: rgba(150, 83, 150, 0.822);
 }
 
 
 
-.division{
-  width: 50vw;
-  height: 100vh;
-  background: plum;
+
+
+.hero-content{
+  width: 100%;
+  height: 60vh;
+  
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
+  top: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.ch-container{
+  width: 500px;
+  height: 80%;
+  margin-bottom: 20px;
+}
+
+
+@keyframes circle{
+  from {
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+
+  
 }
