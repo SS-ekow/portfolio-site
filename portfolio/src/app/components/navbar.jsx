@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 
+
 export default function NavBar() {
 
     return (
@@ -41,21 +42,33 @@ const NavBarStyled = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1rem;
     z-index: 5;
     position: absolute;
     top: 0;
+    
 
     ul{
         display: flex;
         gap: 10px;
         list-style: none;
         z-index: 5;
+        
+        min-width: 80%;
       }
 
       li{
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-left: 15%;
+        font-family: monospace;
+
+        a:hover, a:focus{
+          transform: scale(1.1);
+          border-bottom: 3px solid black;
+        
+        }
+
       }
       
       .logo{

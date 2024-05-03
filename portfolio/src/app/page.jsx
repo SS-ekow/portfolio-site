@@ -5,7 +5,7 @@ import NavBar from "./components/navbar";
 import LinkButton from "./components/linkButtons";
 import Image from "next/image";
 
-
+import two from '../../public/images/two-removebg.png'
 import bootstrap from '../../public/images/bootstrap.png'
 import css from '../../public/images/css-3.png'
 import django from '../../public/images/django.png'
@@ -34,19 +34,29 @@ export default function Home() {
         <div className="division left">
           <div className="profile-circle"></div>
           <div className="circ"></div>
+          <div className='ill'>
+            <Image 
+            src={two}
+            alt="illustration"
+            width={350}
+            height={300}
+            />
+          </div>
 
           <div className="headline">
             <h1>
-              Lorem Ipsum just fuck with us. we're good!.
+              Front end developers & Digital Craftsmen.
             </h1>
             <h3>
-              For real for real. just trust us and pay us. we got you.
+              Highly skilled front end developers eager to start working with you today.
             </h3>
 
             <button className="hire-us">
               Work with us 
             </button>
+
           </div>
+            
           <div className="bubble-box">
             <Bubble source={"#"} />
             <Bubble source={"#"} />
