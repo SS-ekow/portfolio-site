@@ -9,41 +9,41 @@ export default function LinkButton() {
             <div className="button blue">
                 <div>
                     <div className="icon "></div>
-                    <p>Name</p>
+                    <p>LinkedIn</p>
                 </div>
                 <div>
                     <div className="icon"></div>
-                    <p>Name</p>
+                    <p>LinkedIn</p>
                 </div>
             </div>
             <div className="button purple">
                 <div>
                     <div className="icon "></div>
-                    <p>Name</p>
+                    <p>Github</p>
                 </div>
                 <div>
                     <div className="icon"></div>
-                    <p>Name</p>
+                    <p>Github</p>
                 </div>
             </div>
             <div className="button blue">
                 <div>
                     <div className="icon "></div>
-                    <p>Name</p>
+                    <p>Email</p>
                 </div>
                 <div>
                     <div className="icon"></div>
-                    <p>Name</p>
+                    <p>Email</p>
                 </div>
             </div>
             <div className="button purple">
                 <div>
                     <div className="icon "></div>
-                    <p>Name</p>
+                    <p>CodePen</p>
                 </div>
                 <div>
                     <div className="icon"></div>
-                    <p>Name</p>
+                    <p>CodePen</p>
                 </div>
             </div>
 

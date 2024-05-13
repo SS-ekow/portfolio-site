@@ -33,8 +33,8 @@ body {
 
 .division.left{
   .profile-circle{
-    width: 240px;
-    height: 240px;
+    width: 16vw;
+    height: 16vw;
     border-radius: 50%;
     background: white;
     position: relative;
@@ -45,16 +45,18 @@ body {
 
   .profile-circle::after{
     content: "";
-    width: 280px;
-    height: 280px;
+    width: calc(16vw + 10%);
+    height: calc(16vw + 10%);
     border-radius: 50%;
     border-left: 2px dashed #7C6FAF;
     border-top: 2px dashed #7C6FAF;
     border-right: 2px dashed #7C6FAF;
     border-bottom: 3px solid transparent;
     position: absolute;
-    left: -20px;
-    top: -20px;    
+    left: -5%;
+    top: -5%;    
+    animation: circle 5s infinite;
+
   }
 
   .headline{
@@ -63,7 +65,7 @@ body {
     top: 20%;
     
     h1{
-      font-size: 60px;
+      font-size: clamp(24px, 4vw, 60px);
       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'
     }
     
@@ -74,10 +76,10 @@ body {
     .hire-us{
       background: #61C8BA;
       color: white;
-      padding:1rem 2rem;
+      padding:1rem 1.2rem;
       border: 3px solid #7C6FAF;
       border-radius: 40px;
-      font-size: 2rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
       cursor: pointer;
       min-width: 100px;
       margin: 10% 15%;
@@ -90,19 +92,24 @@ body {
     }
   }
   .ill{
-    width: 350px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
+    
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     left: 0;
     
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
 .division.right{
   .profile-circle{
-    width: 240px;
-    height: 240px;
+    width: 16vw;
+    height: 16vw;
     border-radius: 50%;
     background: white;
     position: relative;
@@ -113,16 +120,17 @@ body {
 
   .profile-circle::after{
     content: "";
-    width: 280px;
-    height: 280px;
+    width: calc(16vw + 10%);
+    height: calc(16vw + 10%);
     border-radius: 50%;
     border-left: 3px solid #61C8BA;
     border-top: 3px solid #61C8BA;
     border-right: 3px solid #61C8BA;
     border-bottom: 3px solid transparent;
     position: absolute;
-    left: -20px;
-    top: -20px;    
+    left: -5%;
+    top: -5%;
+    animation: circle 5s infinite;
      }
 
      
@@ -196,31 +204,12 @@ h1{
   background: lightgreen;
 }
 
-
-.project-card{
-  width: 80%;
-  margin: 24px auto;
-  /* background: white;
-  color: black; */
-  display: flex;
-  padding: 16px;
-  gap: 10px;
-  border-radius: 16px;
-
+.about-title{
+  font-size: 1.7rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 
-.project-image{
-  width: 100%;
-  height: 300px;
-  background: lightblue;
-  border-radius: 16px;
-}
-
-.live-btn{
-  border: 3px solid palegreen;
-  border-radius: 8px;
-  padding: 2px;
-}
 
 .more{
   background: white;
@@ -228,9 +217,11 @@ h1{
   padding: 0.5rem 1rem;
   cursor: pointer;
   width: 180px;
+
   margin-left:40%;
   transition: 500ms;
-  
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .more:hover{
@@ -238,6 +229,9 @@ h1{
   color: white;
   border: 1px solid white;
 }
+
+
+
 
 form{
   width: 70%;
@@ -267,6 +261,10 @@ input, textarea {
   border: none;
 }
 
+.animate{
+  animation: float 10s infinite;
+}
+
 
 @keyframes circle{
   from {
@@ -276,6 +274,17 @@ input, textarea {
   to{
     transform: rotate(360deg);
   }
+  
+}
 
+@keyframes float {
+
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(300px);
+  }
   
 }

@@ -6,23 +6,63 @@ import LinkButton from "./components/linkButtons";
 import Image from "next/image";
 
 import two from '../../public/images/two-removebg.png'
-import bootstrap from '../../public/images/bootstrap.png'
-import css from '../../public/images/css-3.png'
-import django from '../../public/images/django.png'
-import flask from '../../public/images/flask.png'
-import html from '../../public/images/html-5.png'
-import js from '../../public/images/js.png'
-import tailwind from '../../public/images/tailwind.png'
-import structure from '../../public/images/structure.png'
-import vue from '../../public/images/vue.png'
-import typescript from '../../public/images/typescript.png'
-
-
+import Project from "./components/project";
+import  StickyScroll  from "./components/ui/sticky-scroll-reveal";
+import HoverBorderGradient from "./components/ui/hover-border-gradient";
 
 
 
 
 export default function Home() {
+
+  const content = [
+    {
+      title: "Collaborative Editing",
+      description:
+        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Collaborative Editing
+        </div>
+      ),
+    },
+    {
+      title: "Real time changes",
+      description:
+        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      content: (
+        <div className="h-full w-full  flex items-center justify-center text-white">
+          <Image
+            src="/linear.webp"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
+      title: "Version control",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+          Version control
+        </div>
+      ),
+    },
+    {
+      title: "Running out of content",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Running out of content
+        </div>
+      ),
+    },
+  ];
 
   return (
     <main>
@@ -85,14 +125,17 @@ export default function Home() {
           <p > 
           
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam repellat perferendis cupiditate ipsam obcaecati nihil magnam, quisquam cum eveniet, facilis laborum 
-          velit molestiae quaerat, consequatur harum? Voluptatibus ex, molestiae unde repellendus, iste non reprehenderit voluptates doloribus at ipsa totam quae. Vitae error corrupti architecto. Mollitia, sapiente maiores reiciendis nisi consequuntur veritatis illo magni aut aliquid ut debitis iusto adipisci placeat temporibus recusandae possimus dicta amet magnam distinctio, voluptas eligendi. 
+          velit molestiae quaerat, consequatur harum? Voluptatibus ex, molestiae unde repellendus, iste non reprehenderit voluptates doloribus at ipsa totam quae. Vitae error corrupti architecto. Mollitia, sapiente maiores reiciendis nisi consequuntur veritatis illo magni aut aliquid ut debitis iusto adipisci placeat temporibus recusandae possimus dicta amet magnam distinctio, voluptas eligendi. <br /> <br />
           Assumenda possimus, vero, deleniti veritatis quos ullam ex quidem adipisci molestias tempora harum omnis repellendus quisquam ut nostrum nobis minus qui est velit voluptatem? Eum, quos? Velit hic quos aperiam nisi odit, rem nobis numquam possimus sunt eum ab. Ipsa ullam ad totam perspiciatis cum harum consectetur nisi molestiae vero est eaque modi, doloremque iure excepturi exercitationem 
-          reiciendis nihil provident quis enim itaque ipsam. Debitis, odio veniam eos mollitia voluptatem consequuntur? Mollitia nostrum quibusdam veniam quis eligendi. Beatae minus est 
-          sint perferendis adipisci commodi iusto eveniet obcaecati rem! Debitis magnam culpa, officiis quaerat optio dolore eveniet iure dolorum tenetur distinctio. Ut, illum. Cumque earum ipsa, neque quidem nam accusantium quam, assumenda libero in voluptatem molestiae dolores molestias sequi possimus maxime saepe iusto reprehenderit iure voluptatibus autem ea quo facere fugiat. Aliquam.</ p>
+          reiciendis nihil provident quis enim itaque ipsam. Debitis, odio veniam eos mollitia voluptatem consequuntur? Mollitia nostrum quibusdam veniam quis eligendi.</ p>
+
+          <p className="statement">
+            "Two devs are better for the price of one"
+          </p>
         </div>
         <div className="col-2">
           <div>
-            <h2>About us</h2>
+            <h2 className="about-title">About us</h2>
             <div className="line"></div>
           </div>
           <div className="graphic">
@@ -108,41 +151,14 @@ export default function Home() {
         </div>
       </section>
       <section className="projects" id="projects">
-        <h2>Featured projects</h2>
-        <div className="project-card">
-          <div className="project-image">
-
-          </div>
-          <div className="project-info"> 
-            <h3 className="font-bold text-2xl">Project Name</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <button className="live-btn">Live →</button>
-          </div>
-        </div>
-        <div className="project-card">
-          
-          <div className="project-info"> 
-            <h3 className="font-bold text-2xl">Project Name</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <button className="live-btn">Live →</button>
-          </div>
-
-          <div className="project-image">
-
-          </div>
-          
-        </div>
-
-        <div className="project-card">
-          <div className="project-image">
-
-          </div>
-          <div className="project-info"> 
-            <h3 className="font-bold text-2xl">Project Name</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            <button className="live-btn">Live →</button>
-          </div>
-        </div>
+        <h2 className="about-title">Featured projects</h2>
+        
+        {/* <Project />
+        <Project />
+        <Project />
+        <Project /> */}
+         <StickyScroll content={content} />
+        
         <div>
           <a href="#">
           <button className="more">See more →</button></a>
@@ -150,12 +166,20 @@ export default function Home() {
         
       </section>
       <section className="ask" id="ask">
-        <h2>Send us a message</h2>
+        <h2 className="about-title">Send us a message</h2>
         <form action="">
           <label htmlFor="">Your Name</label><input type="text" />
           <label htmlFor="">Name of your Organization</label><input type="text" />
           <label htmlFor="">Message</label><textarea type="text" />
-          <input type="submit" className="submit" />
+          {/* <input type="submit" className="submit" /> */}
+          <HoverBorderGradient
+        containerClassName="rounded-full"
+        as="button"
+        className="bg-black  text-white  flex items-center space-x-2 px-2"
+      >
+
+        <span>Send Message</span>
+      </HoverBorderGradient>
         </form>
 
       </section>

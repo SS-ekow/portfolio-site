@@ -5,10 +5,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 import structure from '../../../public/images/structure.png'
+import { useState } from "react";
+
+
 
 export default function Bubble(source) {
+    const [isAnimated, setAnimate] = useState(false);
+
+
+
+
     return (
-        <BubbleStyled className="bubble">
+        <BubbleStyled className={isAnimated ? 'animated': 'not'}>
            <div className="stack">
                 <Image 
                 src= {source}
